@@ -98,11 +98,32 @@ section .container{
 .texts h4{
     font-weight: 600;
     margin: 0;
+    position: relative;
 }
 
 .texts h4.title{
     color: var(--tertiary-color);
     margin: 10px 0;
+}
+
+.texts h4.title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 32%;
+    background-color: var(--primary-color);
+    border-left: 3px solid var(--tertiary-color);
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    32%, 70% {
+        left: 32%;
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 .texts .name{
@@ -311,6 +332,7 @@ section .container{
     font-size: 20px;
     text-transform: uppercase;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 .div-img:hover img {
