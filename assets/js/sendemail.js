@@ -30,7 +30,9 @@ $(document).ready(function () {
 						icon: 'success',
 						showConfirmButton: false,
 						timer: 2000
-					})
+					}).then(() => {
+						$('.form')[0].reset();
+					});
 				}
 				else{
 					Swal.fire({
@@ -39,7 +41,9 @@ $(document).ready(function () {
 						icon: 'error',
 						showConfirmButton: false,
 						timer: 2000
-					})
+					}).then(() => {
+						$('.form')[0].reset();
+					});
 				}
 			}
 		);

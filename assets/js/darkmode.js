@@ -1,23 +1,47 @@
 $(document).ready(function () {
 
+
+    const progressBar = $('.percent');
+    const progressNum = $('.prog');
+    const maxProgress = [90, 85, 65, 70, 60];
+    
+    progressBar.each(function (index) {
+        let counter = 0;
+        const progbar = $(this);
+        const prognum = progressNum.eq(index);
+        let interval;
+    
+        function updateProgress() {
+            if (counter >= maxProgress[index]) {
+                clearInterval(interval);
+            } else {
+                counter += 1;
+                progbar.css('width', counter + '%');
+                prognum.html(counter + '%');
+            }
+        }
+        interval = setInterval(updateProgress, 20);
+    });
+    
+
     //dark mode
-    let mode = true;
+    let theme = true;
 
     $('.dark-mode-button').click(function (e) { 
         e.preventDefault();
 
-        if (mode){
+        if (theme){
             $('body').toggleClass('dark-mode');
             $('.dark-mode-button i').removeClass('gg-moon').addClass('gg-sun');
             $('.dark-mode-button i').attr('data-bs-original-title', 'Light Mode');
             $('#portfolyo').attr('src', 'assets/img/codes/portfolio.png');
-            mode = false;
+            theme = false;
         } else{
             $('body').toggleClass('dark-mode');
             $('.dark-mode-button i').removeClass('gg-sun').addClass('gg-moon');
             $('.dark-mode-button i').attr('data-bs-original-title', 'Dark Mode');
             $('#portfolyo').attr('src', 'assets/img/codes/portfolio-dark.png');
-            mode = true;
+            theme = true;
         }
     });
 
@@ -42,6 +66,7 @@ $(document).ready(function () {
             }
         });
     })
+
 
     // // Retrieve the saved mode and icon from localStorage, or default to 'false' (light mode)
     // let mode = localStorage.getItem('darkMode') === 'true';

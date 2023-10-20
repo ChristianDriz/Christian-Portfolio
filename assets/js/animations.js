@@ -1,17 +1,20 @@
-// $(document).ready(function () {
+$(document).ready(function () {
     
-//     const txt = $('.title');
+    // const txt = $('.title');
 
-//     const txtload = () => {
-//         setTimeout(() => {
-//             txt.html('-Web Developer');
-//         }, 0);
-//         setTimeout(() => {
-//             txt.html('-Web Designer');
-//         }, 4000);
-//     }
+    // const txtload = () => {
+    //     setTimeout(() => {
+    //         txt.html('-Web Developer');
+    //     }, 0);
+    //     setTimeout(() => {
+    //         txt.html('-Web Designer');
+    //     }, 4000);
+    // }
 
-//     txtload();
+    // txtload();
 
-//     setInterval(txtload, 8000);
-// });
+    // setInterval(txtload, 8000);
+
+    
+
+});
