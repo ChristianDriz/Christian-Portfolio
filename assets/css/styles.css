@@ -4,6 +4,7 @@
     --tertiary-color: #D74747;
     --shadow-color: #5252521a;
     --line-color: #8b8b8b;
+    --glow-color: #EBE3E0;
 }
 
 .dark-mode{
@@ -11,6 +12,11 @@
     --secondary-color: #EBE3E0;
     --shadow-color: #0000002a;
     --line-color: #EBE3E0;
+    --glow-color: #D74747;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
@@ -328,27 +334,28 @@ section .container{
 
 #skills .bar{
     width: 100%;
-    height: 14px;
+    height: 10px;
     border-radius: 50px;
-    border: 1px solid #a5a5a52a;
-    background-color: #7e7e7e2a;
+    /* border: 1px solid #5f5f5f2a; */
+    background-color: #adabab2a;
 }
 
-#skills .bar .percent{
+#skills .bar .percent{  
     height: 100%;
     width: 0;
-    border-radius: 50px;
+    border-radius: 50px 0 0 50px;
     background-color: var(--tertiary-color);
     animation: progress 1s ease-in-out forwards;
+    /* opacity: 0; */
 }
 
 /* #skills .bar .percent.html {
-    max-width: 90%;
+    width: 90%;
     animation-delay: 0.1s;
 }
 
 #skills .bar .percent.css {
-    max-width: 85%;
+    width: 85%;
     animation-delay: 0.2s;
 }
 
@@ -377,103 +384,104 @@ section .container{
     }
 } */
 
-@media (max-width: 992px) {
-    .tab-content .col-12.wan, .tab-content .col-12.tri{
-        border-width: 1px 1px 0 0;
-    }
-
-    .tab-content .col-12.tu, .tab-content .col-12.for{
-        border-width: 1px 0 0 0;
-    }
+#education {
+    margin: 20px 0;
+    padding: 0 50px;
 }
 
-@media (max-width: 767px) {
-    .tab-content .col-12.wan, .tab-content .col-12.tri, .tab-content .col-12.fiv{
-        border-width: 1px 0 0 0;
-    }
-
-    .tab-content .col-12.six{
-        border-width: 0;
-    }
-
-    #skills {
-        /* border: 1px solid black; */
-        margin-top: 20px;
-        padding: 0 20px;
-    }
-    
-    .col-skill {
-        display: flex;
-        align-items: center;
-        padding: 5px 10px;
-    }
+.educ-div {
+    display: flex;
+    align-items: start;
+    padding: 10px;
 }
 
-@media (max-width: 577px) { 
-    #skills {
-        /* border: 1px solid black; */
-        margin-top: 20px;
-        padding: 0 10px;
-    }
-    
-    .col-skill {
-        display: flex;
-        align-items: center;
-        padding: 8px 0;
-    }
+.educ-div img {
+    width: 50px;
 }
+
+.educ-details {
+    margin-left: 20px;
+}
+
+.educ-details h6 {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+}
+
+.educ-details p {
+   margin: 0;
+   font-size: 14px;
+}
+
+.educ-details ul {
+    margin-top: 10px;
+}
+
+.educ-details li {
+    font-size: 14px;
+}
+
 
 
 /*services*/
 
 #services{
-    height: 100vh;
+    height: 100%;
+    /* border: 1px solid black; */
 }
 
 #services .container{
-    height: 100%;
-    /* border: 1px solid black; */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 150px;
+    /* border: 1px solid black; */
 }
 
 #services .container h4{
     text-align: center;
     font-weight: 600;
-    padding-bottom: 40px;
+    margin: 50px 0 0 0;
 }
 
-#services .mainbox{
+#services .main-box{
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 50px;
+    padding: 10px;
+    /* border: 1px solid black; */
 }
 
 #services .container .box{
     width: 350px;
-    padding: 50px 30px;
+    padding: 20px;
     border-radius: 15px;
-    /* height: 180px; */
-    background-color: var(--tertiary-color);
-    color: #FFFFFF;
-    /* border: 1px solid var(--secondary-color); */
-    /* margin: 10px 0; */
-    /* box-shadow: 0 5px 10px var(--shadow-color); */
+    /* border: 5px solid var(--tertiary-color); */
+    /* box-shadow: 0 0 20px var(--glow-color); */
+    color: var(--secondary-color);
     text-align: center;
+}
+
+.box img {
+    width: 15rem;
 }
 
 .box i{
     font-size: 3rem;
-    margin-bottom: 15px;
-    color: #FFFFFF;
-    /* color: var(--tertiary-color); */
+    margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 
-.box h5{
-    font-weight: 500;
+.box h6{
+    font-weight: 600;
 }
+
+.box p {
+    margin: 0;
+    font-size: 14px;
+}
+
 
 /* projects */
 
@@ -484,7 +492,7 @@ section .container{
 #projects .container h4 {
     text-align: center;
     padding: 120px 0 20px 0;
-    color: var(--tertiary-color);
+    /* color: var(--tertiary-color); */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -696,10 +704,6 @@ section .container{
 }
 
 @media (max-width: 992px) {
-    #services .mainbox{
-        display: flex;
-        gap: 30px;
-    }
 
     #about .img-container img{
         height: 300px;
@@ -707,9 +711,12 @@ section .container{
         object-fit: cover;
     }
 
-    #services .mainbox{
-        display: grid;
-        gap: 15px;
+    .tab-content .col-12.wan, .tab-content .col-12.tri{
+        border-width: 1px 1px 0 0;
+    }
+
+    .tab-content .col-12.tu, .tab-content .col-12.for{
+        border-width: 1px 0 0 0;
     }
 
 }
@@ -789,10 +796,6 @@ section .container{
         gap: 20px;
     }
 
-    /* #services .container{
-        height: 100%;
-    } */
-
     #contact{
         height: 100%;
         padding-bottom: 100px;
@@ -841,5 +844,62 @@ section .container{
         width: 100%;
         padding: 10px 0;
     }
+
+    #services .container{
+        height: 100%;
+    }
+
+    .tab-content .col-12.wan, .tab-content .col-12.tri, .tab-content .col-12.fiv{
+        border-width: 1px 0 0 0;
+    }
+
+    .tab-content .col-12.six{
+        border-width: 0;
+    }
+
+    #skills {
+        /* border: 1px solid black; */
+        margin-top: 20px;
+        padding: 0 20px;
+    }
     
+    .col-skill {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .educ-details {
+        margin-left: 10px;
+    }
+    
+}
+
+@media (max-width: 577px) { 
+    #skills {
+        /* border: 1px solid black; */
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    
+    .col-skill {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #education {
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    #services .container h4{
+        text-align: center;
+        font-weight: 600;
+        margin: 80px 0 0 0;
+    }
+
+    #services .container .box{
+        padding: 5px 0;
+    }
 }

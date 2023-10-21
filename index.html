@@ -33,7 +33,7 @@
                         <a href="#home" class="nav-link aktib">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link abawt">About Me</a>
+                        <a href="#about" id="asd" class="nav-link abawt">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a href="#services" class="nav-link">Services</a>
@@ -79,7 +79,7 @@
                     </div>
                 </div>  
                 <div class="col-12 col-md-6 order-first order-md-2 img-icon" data-aos="fade-left" data-aos-delay="200">
-                    <img src="assets/img/barong-pogi.png" alt="me" class="hvr-wobble-horizontal">
+                    <img src="assets/img/programmer.png" alt="me" class="hvr-wobble-horizontal">
                 </div>
             </div>
         </div>
@@ -105,14 +105,14 @@
                     <div class="about-tab">
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#skills">Skills</a>
+                                <a class="nav-link active iskils" data-bs-toggle="tab" href="#skills">Skills</a>
                               </li>
                             <li class="nav-item" >
                                 <a class="nav-link" data-bs-toggle="tab" href="#badges">Badges</a>
                               </li>
-                            <!-- <li class="nav-item">
+                            <li class="nav-item">
                               <a class="nav-link" data-bs-toggle="tab" href="#education">Education</a>
-                            </li> -->
+                            </li>
                         </ul>
                         <div class="tab-content">
 
@@ -121,46 +121,46 @@
                                     <div class="col-12 col-sm-6 col-skill">
                                         <img src="assets/img/html.png" alt="html">
                                         <div class="stats">
+                                            <p class>HTML - <span class="prog html">90%</span></p>
                                             <div class="bar">
                                                 <div class="percent html "></div>
                                             </div>
-                                            <p class>HTML - <span class="prog html">90%</span></p>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-skill">
                                         <img src="assets/img/css.png" alt="css">
                                         <div class="stats">
+                                            <p class>css - <span class="prog css">85%</span></p>
                                             <div class="bar">
                                                 <div class="percent css"></div>
                                             </div>
-                                            <p class>css - <span class="prog css">85%</span></p>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-skill">
                                         <img src="assets/img/js.png" alt="js">
                                         <div class="stats">
+                                            <p class>javascript - <span class="prog js">65%</span></p>
                                             <div class="bar">
                                                 <div class="percent js"></div>  
                                             </div>
-                                            <p class>javascript - <span class="prog js">65%</span></p>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-skill">
                                         <img src="assets/img/bootstrap.png" alt="bootstrap">
                                         <div class="stats">
+                                            <p class>bootstrap - <span class="prog btstrp">70%</span></p>
                                             <div class="bar">
                                                 <div class="percent bootstrap"></div>   
                                             </div>
-                                            <p class>bootstrap - <span class="prog btstrp">70%</span></p>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 col-skill">
                                         <img src="assets/img/php.png" alt="php">
                                         <div class="stats">
+                                            <p class>php - <span class="prog php">60%</span></p>
                                             <div class="bar">
                                                 <div class="percent php"></div>                                     
                                             </div>
-                                            <p class>php - <span class="prog php">60%</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -194,8 +194,35 @@
                             </div>
                            
 
-                            <div id="education" class="tab-pane" role="tabpanel">
-                                <p>kllk</p>
+                            <div id="education" class="tab-pane " role="tabpanel">
+                                <div class="row g-0">
+                                    <div class="col-12 col-lg-6 educ-div">
+                                        <img src="assets/img/bpsulogo.png" alt="bpsu">
+                                        <div class="educ-details">
+                                            <h6>Bataan Peninsula State University</h6>
+                                            <p>Bachelor of Science in Information Technology</p>
+                                            <p>Major in Network and Web Application</p>
+                                            <p>2019 - 2023</p>
+                                            <ul>
+                                                <li>Dean’s Lister 1st & 2nd Semester 2021-2022</li>
+                                                <li>Dean’s Lister 1st & 2nd Semester 2022-2023</li>
+                                                <li>In-house Review Best in Thesis Poster 2023</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 educ-div">
+                                        <img src="assets/img/bnhs logo.png" alt="bpsu">
+                                        <div class="educ-details">
+                                            <h6>Bataan National High School SHS</h6>
+                                            <p>Technical Vocational Livelihood (TVL)</p>
+                                            <p>Computer System Servicing (CSS)</p>
+                                            <p>2017-2019</p>
+                                            <ul>
+                                                <li>With Honors</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -206,19 +233,33 @@
 
     <section id="services">
         <div class="container">
-            <!-- <h4>Services</h4> -->
-            <div class="mainbox">
-                <div class="box" data-aos="fade-down" data-aos-delay="200">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <h6>Front End Web Development</h6>
+            <div class="row g-0">
+                <div class="col-12">
+                    <h4>Services</h4>
                 </div>
-                <div class="box" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h6>UI/UX Design</h6>
+                <div class="col-12 col-md-6 col-lg-4 main-box">
+                    <div class="box start" data-aos="fade-down" data-aos-delay="200">
+                        <!-- <i class="fa-solid fa-laptop-code hvr-buzz-out"></i> -->
+                        <img src="assets/img/services/web dev.png" alt="web development">
+                        <h6>Web Development</h6>
+                        <p>Turning Ideas into Online Realities</p>
+                    </div>
                 </div>
-                <div class="box" data-aos="fade-down" data-aos-delay="200">
-                    <i class="fas fa-desktop"></i>
-                    <h6>Graphics Design</h6>
+                <div class="col-12 col-md-6 col-lg-4 main-box ">
+                    <div class="box center" data-aos="fade-up" data-aos-delay="200">
+                        <!-- <i class="fas fa-mobile-alt hvr-buzz-out"></i> -->
+                        <img src="assets/img/services/ui design.png" alt="ui design">
+                        <h6>User Interface Design</h6>
+                        <p>Elevate User Experiences</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0 main-box">
+                    <div class="box end" data-aos="fade-down" data-aos-delay="200">
+                        <!-- <i class="fas fa-desktop hvr-buzz-out"></i> -->
+                        <img src="assets/img/services/graphics design.png" alt="graphics design">
+                        <h6>Graphics Design</h6>
+                        <p>Unleash Your Brand's Creativity</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -231,7 +272,7 @@
                 <div class="col-12 col-md-6 div-img">
                     <img src="assets/img/codes/fuel-on-home.png" alt="fuel-on">
                     <div class="info">
-                        <p>Fuel-On Capstone Project using php</p>
+                        <p>Fuel-On Capstone Project using html, css, bootstrap, js, php</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 div-img">
