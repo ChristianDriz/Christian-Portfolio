@@ -312,7 +312,7 @@ section .container{
 .col-skill {
     display: flex;
     align-items: center;
-    padding: 8px 20px;
+    padding: 15px 20px;
     /* border: 1px solid black     */
 }
 
@@ -866,7 +866,7 @@ section .container{
     .col-skill {
         display: flex;
         align-items: center;
-        padding: 5px 10px;
+        padding: 15px 10px;
     }
 
     .educ-details {
@@ -880,12 +880,6 @@ section .container{
         /* border: 1px solid black; */
         margin-top: 20px;
         padding: 0 10px;
-    }
-    
-    .col-skill {
-        display: flex;
-        align-items: center;
-        padding: 10px;
     }
 
     #education {
